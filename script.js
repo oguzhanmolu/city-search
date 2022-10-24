@@ -38,4 +38,4 @@ function displayMatches() {
   suggestions.innerHTML = html;
 }
 
-searchBar.addEventListener('keydown', displayMatches);
+searchBar.addEventListener('keyup', displayMatches);
