@@ -18,7 +18,8 @@ function findMatches(wordToMatch, cities) {
 
 function displayMatches() {
   const matchArray = findMatches(this.value, cityInfo);
-  const html = matchArray
+  console.log(this.value);
+  const searchResults = matchArray
     .map((place) => {
       const regex = new RegExp(this.value, 'gi');
       const cityName = place.city.replace(
@@ -35,7 +36,7 @@ function displayMatches() {
     </li>`;
     })
     .join('');
-  suggestions.innerHTML = html;
+  suggestions.innerHTML = searchResults;
 }
 
 searchBar.addEventListener('keyup', displayMatches);
